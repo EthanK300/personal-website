@@ -33,7 +33,7 @@ body {
 }
 
 #logo {
-    /* background-color: black; */
+    background-color: black;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -47,6 +47,17 @@ body {
     letter-spacing:0.1em;
     color:white;
     text-decoration:none;
+}
+
+#contact {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:30%;
+    padding:0.5% 1% 0.5% 1%;
+    border-radius: 15px;
+    color:black;
+    background-color:white;
 }
 
 .main {
@@ -80,7 +91,7 @@ body {
     height:15vw;
     object-fit: cover;
     border-radius:100%;
-    
+    margin-left:1%;
     margin-top:4%;
     margin-bottom:4%;
     margin-right:4%;
@@ -119,13 +130,50 @@ body {
 #stack {
     margin-right:0.5vh;
     grid-column: 1;
+    display:grid;
+    grid-template-columns: 60% 40%
 }
 
 #socials {
     margin-left: 0.5vh;
     grid-column: 2;
+    display:grid;
+    grid-template-columns: 40% 60%;
+}
+
+.column-header {
+    color:white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:7%;
+    grid-column: span 2;
+    font-size:2vw;
+}
+
+.column {
+    display:flex;
+    flex-direction: column;
+}
+
+.icon {
+    display:grid;
+    grid-template-columns: 50% 50%;
+    margin-left:45%;
+    margin-bottom:5%;
+    align-items:center;
+    text-decoration: none;
+
 }
 
 .label {
     color:white;
+    grid-column:2;
+    font-size:1.5em;
+    margin-left:4vw;
+}
+
+.iconlogo {
+    grid-column: 1;
+    width:4vw;
+    height:auto;
 }
