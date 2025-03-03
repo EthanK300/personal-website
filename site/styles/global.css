@@ -1,0 +1,131 @@
+html {
+    height:100vh;
+    width:100vw;
+    margin:0, 0, 0, 0;
+    padding:0, 0, 0, 0;
+}
+
+body {
+    background-color: black;
+    height:100%;
+    width:100%;
+    margin:0 0 0 0;
+    padding:0 0 0 0;
+    font-family:'Amiko', sans-serif;
+}
+
+.header {
+    width:100%;
+    height:10%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    margin-top:1%;
+    margin-bottom:1%;
+}
+
+.header-links {
+    text-decoration:none;
+    color:white;
+    margin:1%;
+    letter-spacing:0.1em;
+    font-weight:600;
+}
+
+#logo {
+    /* background-color: black; */
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:25%;
+    border-radius: 15px;
+    border: 3px solid white;
+    padding:0.3em;
+    margin-right:15%;
+    font-size:2em;
+    font-weight:600;
+    letter-spacing:0.1em;
+    color:white;
+    text-decoration:none;
+}
+
+.main {
+    width:50%;
+    margin-left:25vw;
+    display:grid;
+    grid-template-columns: 50% 50%;
+}
+
+.card {
+    border: 3px solid white;
+}
+
+#namecard {
+    display:flex;
+    margin-bottom:1vh;
+    justify-content: space-between;
+    grid-column: span 2;
+}
+
+#name {
+    color:white;
+    font-size:2.5vw;
+    margin-left:16%;
+    margin-top:6%;
+    margin-bottom:0;
+}
+
+#photo {
+    width:15vw;
+    height:15vw;
+    object-fit: cover;
+    border-radius:100%;
+    
+    margin-top:4%;
+    margin-bottom:4%;
+    margin-right:4%;
+}
+
+#subtext {
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    height:4vw;
+    width:25vw;
+    margin-left:5%;
+}
+
+#marker {
+    height:50%;
+    margin-left:16%;
+}
+
+#location {
+    color:white;
+    font-size:1vw;
+    opacity: 50%;
+    margin:0;
+}
+
+#bio {
+    margin-left:16%;
+    margin-bottom:8%;
+    color:white;
+    font-size:1vw;
+    margin-top:0;
+    letter-spacing: 0.05em;
+}
+
+#stack {
+    margin-right:0.5vh;
+    grid-column: 1;
+}
+
+#socials {
+    margin-left: 0.5vh;
+    grid-column: 2;
+}
+
+.label {
+    color:white;
+}
