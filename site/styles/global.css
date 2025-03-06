@@ -205,3 +205,28 @@ body {
     color:white;
     font-size:2vw;
 }
+
+#aboutme {
+    display:flex;
+    flex-direction: column;
+    margin-left: 25vw;
+}
+
+.abelement {
+    margin-bottom:5vh;
+}
+
+#abphoto{
+    width:30%;
+    height:auto;
+    border-radius:100%;
+    margin:1vh 1vh 1vh 1vh;
+}
+
+#rpilogo {
+    width:30%;
+    height:auto;
+    border-radius: 100%;
+    margin:1vh 1vh 1vh 1vh;
+    float:right;
+}
