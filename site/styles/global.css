@@ -313,5 +313,59 @@ body {
 
 #cform {
     margin-top:1vh;
-    
+    display:flex;
+    flex-direction: column;
+}
+
+#forme {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:3%;
+}
+
+#cta {
+    font-size:1.25em;
+    align-self: center;
+    color:white;
+}
+
+.cform-element {
+    width: fit-content;
+    margin-bottom:15px;
+}
+
+.field {
+    background-color: black;
+    border-radius: 7px;
+    color:gray;
+}
+
+.descriptor {
+    color:white;
+}
+
+#content-wrapper {
+    display:flex;
+    align-items: center;
+}
+
+#content {
+    color:gray;
+    width:30vw;
+}
+
+#control {
+    width:100%;
+    display:flex;
+    gap:10vw;
+    grid-column: span 2;
+    width:fit-content;
+}
+
+.cbuttons {
+    background-color: black;
+    border-radius: 7px;
+    border-color: white;
+    color:white;
 }

@@ -32,7 +32,29 @@
             </a>
         </div>
         <div class="card" id="cform">
-
+            <p id="cta">Send me a message:</p>
+            <form id="forme">
+                <div class="cform-element">
+                    <label for="fname" class="descriptor">First Name:</label>
+                    <input type="text" class="field" id="fname" name="fname" value="eg. John">
+                </div>
+                <div class="cform-element">
+                    <label for="lname" class="descriptor">Last Name:</label>
+                    <input type="text" class="field" id="lname" name="lname" value="eg. Doe">
+                </div>
+                <div class="cform-element">
+                    <label for="subject" class="descriptor">Subject:</label>
+                    <input type="text" class="field" id="subject" name="subject" value="eg. Work">
+                </div>
+                <div class="cform-element" id="content-wrapper">
+                    <label for="content" class="descriptor">Content:</label>
+                    <textarea rows="4" class="field" id="content" name="content">Enter your message</textarea>
+                </div>
+                <div id="control">
+                    <input type="reset" value="Reset" class="cbuttons">
+                    <input type="submit" value="Submit" class="cbuttons">
+                </div>
+            </form>
         </div>
     </div>
 </body>
