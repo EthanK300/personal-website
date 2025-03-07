@@ -267,3 +267,51 @@ body {
     font-size:2em;
     font-weight:500;
 }
+
+#coptions {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top:1%;
+    padding-bottom: 0.9%;
+}
+
+#textdisc {
+    grid-column: 1 / span 2;
+    text-decoration: none;
+    color:white;
+    font-size:1.5em;
+    margin:auto;
+    margin-right: 0;
+}
+
+#textinsta {
+    grid-column: 2 / span 2;
+    text-decoration: none;
+    color:white;
+    font-size:1.5em;
+    margin:auto;
+    margin-left: 0;
+}
+
+.contactlogo {
+    width:30%;
+    height:auto;
+}
+
+.cimage {
+    align-self:center;
+}
+
+#contactdiscord {
+    margin-left: 5%;
+}
+
+#contactinsta {
+    margin-right:5%;
+    text-align:right;
+}
+
+#cform {
+    margin-top:1vh;
+    
+}
