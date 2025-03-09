@@ -22,3 +22,34 @@ contact.addEventListener("mouseleave", (event) => {
     contact.style.color = "black";
     contact.style.border = "2px solid black"
 });
+
+const elementList = document.querySelectorAll(".card");
+elementList.forEach((a) => {
+    a.addEventListener("mouseeenter", (event) => {
+        console.log("a");
+        mouseover(a);
+    });
+    a.addEventListener("mouseleave", (event) => {
+        mouseleave(a);
+    });
+});
+
+function mouseover(hoverObj) {
+    const elements = document.querySelectorAll(".card");
+    hoverObj.classList.add("hover-object");
+    elements.forEach((b) => {
+        if(hoverObj != b){
+            b.classList.add("other-object");
+        }
+    });
+}
+
+function mouseleave(hoverObj) {
+    hoverObj.classList.remove("hover-object");
+    const elements = document.querySelectorAll(".card");
+    elements.forEach((b) => {
+        if(hoverObj != b){
+            b.classList.remove("other-object");
+        }
+    });
+}
