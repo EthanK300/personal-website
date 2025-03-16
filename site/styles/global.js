@@ -25,8 +25,7 @@ contact.addEventListener("mouseleave", (event) => {
 
 const elementList = document.querySelectorAll(".card");
 elementList.forEach((a) => {
-    a.addEventListener("mouseeenter", (event) => {
-        console.log("a");
+    a.addEventListener("mouseenter", (event) => {
         mouseover(a);
     });
     a.addEventListener("mouseleave", (event) => {

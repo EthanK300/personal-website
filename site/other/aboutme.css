@@ -1,0 +1,47 @@
+#aboutme {
+    display:flex;
+    flex-direction: column;
+    margin-left: 25vw;
+}
+
+#abtitle {
+    color:white;
+    align-self: center;
+    margin-bottom:5%;
+    font-size:2em;
+    font-weight:500;
+}
+
+.abelement {
+    display:flex;
+    align-content: center;
+}
+
+#abphoto{
+    width:30%;
+    height:30%;
+    border-radius:100%;
+    margin: 2%
+}
+
+.text {
+    color:white;
+    align-self: center;
+    margin: 5% 5% 5% 5%;
+    max-width:100%;
+    letter-spacing:0.07em;
+}
+
+#rpilogo {
+    width:30%;
+    height:30%;
+    border-radius: 100%;
+    margin:2%;
+    margin-left:auto;
+}
+
+.ablabel {
+    color:white;
+    align-self:center;
+    font-size:1.25em;
+}

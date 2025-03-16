@@ -1,0 +1,115 @@
+#contacts {
+    grid-column: span 2;
+    display:flex;
+    flex-direction: column;
+}
+
+#getintouch {
+    color:white;
+    align-self: center;
+    margin-bottom:5%;
+    font-size:2em;
+    font-weight:500;
+}
+
+#coptions {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top:1%;
+    padding-bottom: 0.9%;
+}
+
+#textdisc {
+    grid-column: 1 / span 2;
+    text-decoration: none;
+    color:white;
+    font-size:1.5em;
+    margin:auto;
+    margin-right: 0;
+}
+
+#textinsta {
+    grid-column: 2 / span 2;
+    text-decoration: none;
+    color:white;
+    font-size:1.5em;
+    margin:auto;
+    margin-left: 0;
+}
+
+.contactlogo {
+    width:30%;
+    height:auto;
+}
+
+.cimage {
+    align-self:center;
+}
+
+#contactdiscord {
+    margin-left: 5%;
+}
+
+#contactinsta {
+    margin-right:5%;
+    text-align:right;
+}
+
+#cform {
+    margin-top:1vh;
+    display:flex;
+    flex-direction: column;
+}
+
+#forme {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:3%;
+}
+
+#cta {
+    font-size:1.25em;
+    align-self: center;
+    color:white;
+}
+
+.cform-element {
+    width: fit-content;
+    margin-bottom:15px;
+}
+
+.field {
+    background-color: black;
+    border-radius: 7px;
+    color:gray;
+}
+
+.descriptor {
+    color:white;
+}
+
+#content-wrapper {
+    display:flex;
+    align-items: center;
+}
+
+#content {
+    color:gray;
+    width:30vw;
+}
+
+#control {
+    width:100%;
+    display:flex;
+    gap:10vw;
+    grid-column: span 2;
+    width:fit-content;
+}
+
+.cbuttons {
+    background-color: black;
+    border-radius: 7px;
+    border-color: white;
+    color:white;
+}
