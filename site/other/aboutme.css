@@ -47,5 +47,12 @@
 }
 
 .other {
-    
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#daystatus {
+    color:white;
+    font-size: 2em;
 }
