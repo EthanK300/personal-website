@@ -22,27 +22,26 @@ app.get("/status", async function(req, res) {
     const blockId = process.env.NOTION_REFLECT_ID;
     const response = await notion.blocks.children.list({
         block_id: blockId,
-        page_size: 50,
+        page_size: 100,
     });
-    //each block right now is 14 size
     const blockSize = 15;
-    const numToTop = 3;
+    const distToFirst = 15;
     const data = 0;
 
-    const response2 = await notion.blocks.retrieve({
-        block_id:response.results[numToTop + 12].id,
-    });
-
-    console.log("AA");
-    console.log(response2);
-    console.log("AA");
-
-    for(let i = numToTop; i < response.results.length; i+=blockSize){
-        console.log(response.results[i].type);
+    console.log("A");
+    for(let i = 1; (i * blockSize) + distToFirst < 100; i++){
+        console.log(distToFirst + (15 * i));
+        console.log(i + ", " + response.results[distToFirst + (blockSize * i)].type);
+        const response2 = await notion.blocks.retrieve({
+            block_id:response.results[distToFirst + (blockSize * i)].id,
+        });
+        console.log(response2);
     }
+    console.log("B");
+
     res.status(200).send({
         success:true,
         message:"ok",
-        body:response2,
+        body:data,
     });
 });
