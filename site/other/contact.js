@@ -4,7 +4,9 @@ const lname = document.getElementById("lname");
 const fname = document.getElementById("fname");
 const ctrl = document.querySelectorAll(".cbuttons");
 
-async function submit(formObj){
+function validate(formObj){
+    event.preventDefault();
+    console.log("parsing form");
     let alertText = "";
     if(fname.value == "" || fname.value == "eg. John"){
         alertText += "First name must not be empty \n";
@@ -18,24 +20,30 @@ async function submit(formObj){
     if(content.value == "" || content.value == "Enter your message"){
         alertText += "Message content must not be empty";
     }
-    if(alertText != ""){
-        console.log("submitting form");
-        let data = formObj;
-        const response = await fetch("/contactForm", {
-            method: "POST",
-            headers: {
-            'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        });
-        await response.json().then(obj => {
-            data = obj;
-        });
-        console.log(data);
+    if(alertText == ""){
+        console.log("form validated");
+        submit(formObj);
     }else{
         alert(alertText);
         return;
     }
+}
+
+async function submit(formObj){
+    console.log("sending form");
+    let data = JSON.stringify(Object.fromEntries(new FormData(formObj)));
+    console.log(data);
+    const response = await fetch("/contactForm", {
+        method: "POST",
+        headers: {
+        'Content-Type': 'application/json'
+        },
+        body: data
+    });
+    await response.json().then(obj => {
+        data = obj;
+    });
+    console.log(data);
 }
 
 content.addEventListener("focus", (event) => {

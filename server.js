@@ -54,7 +54,7 @@ app.get("/status", async function(req, res) {
 
 app.post("/contactForm", async function(req, res) {
     console.log("receiving contact form submission data");
-    console.log(req);
+    console.log(req.body);
 
     res.status(200).send({
         success:true,
