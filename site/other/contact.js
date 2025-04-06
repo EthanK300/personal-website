@@ -4,6 +4,40 @@ const lname = document.getElementById("lname");
 const fname = document.getElementById("fname");
 const ctrl = document.querySelectorAll(".cbuttons");
 
+async function submit(formObj){
+    let alertText = "";
+    if(fname.value == "" || fname.value == "eg. John"){
+        alertText += "First name must not be empty \n";
+    }
+    if(lname.value == "" || lname.value == "eg. Doe"){
+        alertText += "Last name must not be empty \n";
+    }
+    if(subject.value == "" || subject.value == "eg. Work"){
+        alertText += "Subject must not be empty \n";
+    }
+    if(content.value == "" || content.value == "Enter your message"){
+        alertText += "Message content must not be empty";
+    }
+    if(alertText != ""){
+        console.log("submitting form");
+        let data = formObj;
+        const response = await fetch("/contactForm", {
+            method: "POST",
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+        await response.json().then(obj => {
+            data = obj;
+        });
+        console.log(data);
+    }else{
+        alert(alertText);
+        return;
+    }
+}
+
 content.addEventListener("focus", (event) => {
     if (content.value == "Enter your message") {
         content.value = "";
