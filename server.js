@@ -18,26 +18,32 @@ const listener = app.listen(PORT, IP, () => {
 });
 
 app.get("/status", async function(req, res) {
-    console.log("notion reflection page data:");
+    console.log("acquiring notion data");
     const blockId = process.env.NOTION_REFLECT_ID;
     const response = await notion.blocks.children.list({
         block_id: blockId,
         page_size: 100,
     });
+
     const blockSize = 15;
     const distToFirst = 15;
-    const data = 0;
+    let data = 0;
+    let times = 0;
 
-    console.log("A");
     for(let i = 1; (i * blockSize) + distToFirst < 100; i++){
-        console.log(distToFirst + (15 * i));
-        console.log(i + ", " + response.results[distToFirst + (blockSize * i)].type);
+        times++;
+        // console.log(distToFirst + (15 * i));
+        // console.log(i + ", " + response.results[distToFirst + (blockSize * i)].type);
+        //request notion api for each block
         const response2 = await notion.blocks.retrieve({
             block_id:response.results[distToFirst + (blockSize * i)].id,
         });
-        console.log(response2);
+        // console.log(response2);
+        data += Number(response2.paragraph.rich_text[0].plain_text.slice(15, 17));
     }
-    console.log("B");
+
+    data /= times;
+    console.log("Sending average: " + data);
 
     res.status(200).send({
         success:true,
