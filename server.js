@@ -76,5 +76,13 @@ app.post("/contactForm", async function(req, res) {
             body: "Sorry, I'm not accepting messages right now!"
         });
     }
+});
 
+app.get("/test", async function(req, res) {
+    console.log("received request test");
+    res.status(200).send({
+        success:true,
+        message:"ok",
+        body:"ok1"
+    });
 });
