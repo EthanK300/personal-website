@@ -5,4 +5,3 @@ If you have any questions you can always go to the Contact Me page!
 
 Have a nice day!
 
-:D
